@@ -1,0 +1,21 @@
+server:
+  port: 9311
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://38.55.199.13:13306/pet_manager?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: "3176383"
+  servlet:
+    multipart:
+      max-file-size: 2048MB
+      max-request-size: 2048MB
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+file:
+  upload-dir: F:/dev_project/java_project/SpringBoot+Vue宠物管理系统/PetManagerApi/files/ # 请确保这个路径是正确的
